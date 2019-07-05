@@ -6,4 +6,4 @@ import store from './store/index';
 
 
 
-render(<Root articles = {articles} />, document.getElementById('root'))
+render(<Root articles />, document.getElementById('root'))

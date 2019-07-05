@@ -57,6 +57,8 @@ import CommentList from '../CommentList';
 
 				</button>
 
+				<button onClick = {this.handleDelete}>Delete me</button>
+
 					{this.getBody()}
 			
 
@@ -77,7 +79,6 @@ import CommentList from '../CommentList';
 	
 			<br />
 
-			<button onClick = {this.handleDelete}>Delete me</button>
 			<button onClick = {() => this.setState({updateIndex: this.state.updateIndex + 1})}>updateIndex</button>
 
 			<br />

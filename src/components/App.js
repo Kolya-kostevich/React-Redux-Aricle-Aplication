@@ -6,6 +6,9 @@ import 'react-select/dist/react-select.css'
 import CommentForm from './CommentForm/index';
 import Filters from '../Filters/index';
 import Counter from './Counter';
+import {connect} from 'react-redux';
+import articles from '../reducer/articles';
+
 
 class App extends Component {
 
@@ -15,10 +18,12 @@ class App extends Component {
 
     render() {
 
+        const {articles} = this.props;
+
         return (
             <div>
                 <Counter />
-                <Filters articles = {[]} />
+                <Filters articles = {articles} />
                 <ArticleList />;
             </div>
         );
@@ -27,4 +32,4 @@ class App extends Component {
     changeSelection = selection => this.setState({ selection });
 }
 
-export default App;
+export default connect(articles)(App);
